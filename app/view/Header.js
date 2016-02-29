@@ -1,0 +1,13 @@
+Ext.define("SMS.view.Header",{
+	extend:'Ext.Component',
+	initComponent:function(){
+		Ext.applyIf(this,{
+			xtype:'box',
+			cls:'header',
+			region:'north',
+			html:'<h2>员工管理系统</h2>',
+			height:30
+		});
+		this.callParent(arguments);
+	}
+});

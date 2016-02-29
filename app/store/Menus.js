@@ -1,0 +1,12 @@
+Ext.define("SMS.store.Menus",{
+	extend:'Ext.data.TreeStore',
+	root:{
+		expanded:true,
+		text:'系统菜单',
+		iconCls:'manage'
+	},
+	proxy:{
+		type:'ajax',
+		url:'/SMS/data/menuTree.json'
+	}
+});

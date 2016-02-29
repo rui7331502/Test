@@ -1,0 +1,25 @@
+Ext.define("SMS.view.Menu",{
+	extend:'Ext.tree.Panel',
+	alias:'widget.smsmenu',
+	requires:['SMS.store.Menus'],
+	initComponent:function(){
+		Ext.applyIf(this,{
+			id:'menu-panel',
+			title:'系统菜单',
+			iconCls:'icon-menu',
+			region:'west',
+			margins:'0 0 -1 1',
+			split:true,
+			width:212,
+			minWidth:130,
+			maxWidth:300,
+			//rootVisible:false,
+			containerScroll:true,
+			collapsible:true,
+			autoScroll:false,
+			//useArrows:true,
+			store:Ext.create('SMS.store.Menus')
+		});
+		this.callParent(arguments);
+	}
+});

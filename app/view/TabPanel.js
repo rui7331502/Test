@@ -1,0 +1,22 @@
+Ext.define("SMS.view.TabPanel",{
+	extend:'Ext.tab.Panel',
+	initComponent:function(){
+		Ext.applyIf(this,{
+			id:'content-panel',
+			region:'center',
+			defaults:{
+				autoScroll:true,
+				bodyPadding:10
+			},
+			activeTab:0,
+			border:false,
+			items:[{
+				id:'HomePage',
+				title:'首页',
+				iconCls:'home',
+				layout:'fit'
+			}]
+		});
+		this.callParent(arguments);
+	}
+});
